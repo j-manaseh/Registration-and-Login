@@ -97,6 +97,13 @@ if (isset($_POST['submit'])) {
             <div class="top">
                 <span>Already have an account? <a href="signin.php">Login</a></span>
                 <header>Register</header>
+                      <?php
+         if(isset($error)){
+            foreach($error as $error){
+               echo '<span style="color:white;">'.$error.'</span>';
+            }
+         }
+      ?>
             </div>
             <div class="two-forms">
                 <div class="input-box">
