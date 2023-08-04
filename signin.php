@@ -46,7 +46,7 @@ if(isset($_POST['sign'])) {
     <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
-    <title>Employee Login & Registration</title>
+    <title>Employee Sign in</title>
 </head>
 <body>
  <div class="wrapper">
@@ -72,6 +72,13 @@ if(isset($_POST['sign'])) {
             <div class="top">
                 <span>Don't have an account? <a href="index.php" >Register</a></span>
                 <header>Login</header>
+                      <?php
+         if(isset($error)){
+            foreach($error as $error){
+               echo '<span style="color:white;">'.$error.'</span>';
+            }
+         }
+      ?>
             </div>
             <div class="input-box">
                 <input type="email" class="input-field" name="Email" placeholder="Email Address">
